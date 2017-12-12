@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Main">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Save report As..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#ref" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </MenuBar>
+      <Label alignment="TOP_CENTER" layoutX="14.0" layoutY="45.0" text="Уровень ущерба:" textAlignment="CENTER" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="154.0" text="Уровень вероятности атаки:" AnchorPane.rightAnchor="405.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="cb2" layoutX="225.0" layoutY="152.0" prefWidth="150.0" AnchorPane.rightAnchor="225.0" />
+      <ChoiceBox fx:id="cb1" layoutX="225.0" layoutY="43.0" prefWidth="150.0" AnchorPane.leftAnchor="225.0" />
+      <Button fx:id="btn" layoutX="258.0" layoutY="254.0" mnemonicParsing="false" onAction="#report" text="Расчитать">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="text" disable="true" layoutY="260.0" prefHeight="110.0" prefWidth="600.0" promptText="#report" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="text1" disable="true" layoutY="78.0" prefHeight="60.0" prefWidth="600.0" promptText="#description" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <TextArea fx:id="text2" disable="true" layoutY="188.0" prefHeight="60.0" prefWidth="600.0" promptText="#description" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+   </children>
+</AnchorPane>
