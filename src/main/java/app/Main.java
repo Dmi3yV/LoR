@@ -144,15 +144,13 @@ public class Main extends Application {
 	@FXML
 	public void ref() {
 		Alert alert = new Alert(AlertType.INFORMATION);
-		alert.setTitle("INFORMATION about this programm");
+		alert.setTitle("INFORMATION about this program");
 		alert.setHeaderText("Программа предназначена для вычисления уровня риска информационной безопасности\n"
 				+ "на основе имеющихся данных об уровне ущерба и вероятности реализации атаки");
-		alert.setContentText("This program by VDV version 1.0");
+		alert.setContentText("This program by VDV version 1.1");
 		alert.showAndWait().ifPresent(new Consumer<ButtonType>() {
 			public void accept(ButtonType rs) {
-			    if (rs == ButtonType.OK) {
-			        System.out.println("Pressed OK.");
-			    }
+			    rs = ButtonType.OK;
 			}
 		});
 	}

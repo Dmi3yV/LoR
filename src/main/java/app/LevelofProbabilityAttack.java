@@ -5,21 +5,23 @@ public class LevelofProbabilityAttack {
 	public String level;
 	public String description;
 
+	//конструкторы
+	//с параметрами
 	public LevelofProbabilityAttack(int id, String level, String description) {
 		this.id = id;
 		this.level = level;
 		this.description = description;
 	}
-	
+	//по умолчанию
 	public LevelofProbabilityAttack() {this(0, "", "");}
-	
+	//копии
 	public LevelofProbabilityAttack(LevelofProbabilityAttack a) {
 		this.id = a.getId();
 		this.level = a.getLevel();
 		this.description = a.getDescription();
 	}
 	
-	
+	//get-методы
 	public int getId() {
 		return id;
 	}
@@ -32,6 +34,7 @@ public class LevelofProbabilityAttack {
 		return description;
 	}
 
+	//переопределение метода
 	@Override
 	public String toString() {return level;}
 	
